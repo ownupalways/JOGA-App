@@ -357,19 +357,20 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 	color: #fff;
 	cursor: pointer;
 }
-@media screen and  (max-width: 600px;){
+@media screen and  (max-width: 600px){
 	.Formcontainer{
 		width:100%;
 		height:auto;
 		padding: 15px 10px 20px 2px;
+		margin: 0 0 10px 0;
 		border-radius: 5px;
 		right: 8px;
 		float: auto;
 	}
 	/*Login fields styling for login file only*/
 	.Login-container{
-		width:450px ;
-		height: auto;
+		width:100%;
+		height:auto;
 		padding: 15px 10px 20px 2px;
 		border-radius: 5px;
 		background-color: #345dad;
