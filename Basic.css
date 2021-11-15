@@ -326,7 +326,7 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 	float: left;
 	width: 100px;
 	height: 50px;
-	margin: 0 2pc 0 35px;
+	margin: 0 2px 0 35px;
 	padding: 5px;
 	font-size: 20px;
 	font-weight: bolder;
@@ -344,7 +344,7 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 	float: right;
 	width: 100px;
 	height: 50px;
-	margin: 0 2pc 0 10px;
+	margin: 0 2px 0 10px;
 	padding: 5px;
 	font-size: 20px;
 	font-weight: bolder;
@@ -359,34 +359,41 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 }
 @media screen and  (max-width: 600px){
 	.Formcontainer{
-		width:100%;
+		width:90%;
 		height:auto;
-		padding: 0px 10px 20px 2px;
-		margin: 0 5px 50px 10px;
+		margin: 10px;
 		border-radius: 5px;
-		right: 0px;
 	}
 	/*Login fields styling for login file only*/
 	.Login-container{
-		width:100%;
+		width:95%;
 		height:auto;
-		padding: 15px 10px 20px 2px;
+		padding: 15px 10px 20px 1px;
 		border-radius: 5px;
-		background-color: #345dad;
-		opacity: .6;
-		margin: 0 0 10px 0;
-		position:absolute;
-		right: 8px;
-		float: auto;
 	}
+	#StudentForm{
+		padding-bottom: 20px;
+	}
+	
 	input[type = text], input[type=date], input[type=phonenumber], select{
 		width: 100%;
 		padding: 12px 20px;
-		margin:8px 0;
+		margin:5px;
 		line-height: 1.5;
 		box-sizing: border-box;
 		border:none;
-		color: white;
 	}
-	
+	label{
+		margin-left: 2px;
+	}
+	.cancel-btn{
+		padding: 5px;
+		outline: none;
+		margin: 5px;
+	}
+	.Submit-btn{
+		padding: 0;
+		margin: 5px;
+		outline: none;
+	}
 }
