@@ -10,7 +10,7 @@
 }
 /*landing page styling for index file*/
 body{
-	height:1000px;
+	height:180vh;
 	width: 100%;
 	background-image:url(images/baby.png);
 	background-size: cover;
@@ -77,11 +77,12 @@ body::before{
 }
 
 /*this for the navigation "Register", "Learn More" and "Login" buttons in Register and Login files */
-/*.tabs{
-	width: 100%
-	height:auto;
-	margin-top: 20px;
-}*/
+.tabs{
+	margin-top: 150px;
+}
+.registertabs{
+	margin-top: 140vh;
+}
 .tabs a{
 	color: #fff;
 	text-align: center;
@@ -174,12 +175,16 @@ body::before{
 	.banner-text .tabs a{
 		font-size: 15px;
 		text-align: center;
-		margin: 5px;
+		margin: 20px;
+		display: flex;
+		flex-direction: column;
 	}
 	.tabs a{
 		font-size: 15px;
 		text-align: center;
-		margin: 5px;
+		margin:20px;
+		display: flex;
+		flex-direction: column;
 	}
 }
 /*Styling menu and anchor tags */
@@ -216,16 +221,23 @@ body::before{
 .menuarea .icon {
 	display: none;
 }
-/*Styling menu responsiveness */
+/*Styling menu responsiveness for landing page*/
 @media screen and (max-width: 600px){
-	.banner{
+	body{
+		height:180vh;
 		width: 100%;
+		background-image:url(images/baby.png);
+		background-size: cover;
 		background-position: center center;
 	}
 }
 @media screen and (max-width: 600px){
 	.menuarea a{
 		display: none;
+	}
+	.menuarea a:hover:not(:last-child){
+		background-color: white;
+
 	}
 	.menuarea a.icon{
 		float: right;
@@ -235,19 +247,20 @@ body::before{
 }
 
 @media screen and (max-width: 600px){
-	.menuarrea .responsive{
+	.menuarrea.responsive{
 		position: relative;
 	}
-	.menuarea .responsive .icon{
+	.menuarea.responsive .icon{
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
-	.menuarea .responsive a {
+	.menuarea.responsive a {
 		float: none;
+		width: auto;
 		display: block;
 		text-align: left;
-		z-index: 1;
+		background-color: #c2c405;
 	}
 }
 
@@ -258,7 +271,7 @@ body::before{
 	width:450px ;
 	height:auto;
 	padding: 15px 10px 20px 2px;
-	border-radius: 5px;
+	border-radius: 8px;
 	background-color: #345dad;
 	opacity: .6;
 	margin: 0 50px 50px 5px;
@@ -295,14 +308,18 @@ input, select{
 	padding-left:10px;
 }
 /*input field styling*/
-input[type = text], input[type=date], input[type=phonenumber], select{
-	width: 100%;
+input[type = text], input[type=date], input[type= password], input[type=phonenumber], select{
+	width: 95%;
+	height: 40px;
 	padding: 12px 20px;
-	margin:8px 0;
+	margin:;
 	line-height: 1.5;
 	box-sizing: border-box;
 	border:none;
-	color: white;
+	color: black;
+	font-weight: bolder;
+	border-radius: 10px;
+	outline: none;
 }
 /*particulars for login file only*/
 .login-clearmid{
@@ -320,7 +337,10 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 }
 /*Particulars for all Submit and cancel buttons*/
 .clearmid{
-	padding-top: 160px;
+	padding-top: 35vh;
+}
+.login-clearmid{
+	padding-top: 20vh;
 }
 .Submit-btn{
 	float: left;
@@ -333,6 +353,7 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 	border-radius: 50px;
 	background: transparent;
 	border: 2px solid #fff;
+	outline: none;
 }
 
 .Submit-btn:hover{
@@ -344,13 +365,14 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 	float: right;
 	width: 100px;
 	height: 50px;
-	margin: 0 2px 0 10px;
+	margin: 0 2px 0 5px;
 	padding: 5px;
 	font-size: 20px;
 	font-weight: bolder;
 	border-radius: 50px;
 	background: transparent;
 	border: 2px solid #fff;
+	outline: none;
 }
 .cancel-btn:hover{
 	background-color: red;
@@ -366,16 +388,15 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 	}
 	/*Login fields styling for login file only*/
 	.Login-container{
-		width:95%;
+		width:90%;
 		height:auto;
-		padding: 15px 10px 20px 1px;
-		border-radius: 5px;
+		margin: 10px;
 	}
 	#StudentForm{
 		padding-bottom: 20px;
 	}
 	
-	input[type = text], input[type=date], input[type=phonenumber], select{
+	input[type = text], input[type=date], input[type=password], input[type=phonenumber], select{
 		width: 100%;
 		padding: 12px 20px;
 		margin:5px;
@@ -384,7 +405,7 @@ input[type = text], input[type=date], input[type=phonenumber], select{
 		border:none;
 	}
 	label{
-		margin-left: 2px;
+		margin-left: 5px;
 	}
 	.cancel-btn{
 		padding: 5px;
