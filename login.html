@@ -14,31 +14,39 @@
 					<h2>JOGA</h2>
 				</div>
 				<div class="menuarea" id="myTopnav">
-					<a href="home.html">Home</a>
-					<a href="about.html">About</a>
-					<a href="services.html">Services</a>
-					<a href="portfolio.html">Portfolio</a>
-					<a href="achievement.html">Achievement</a>
-					<a href="blog.html">Blog</a>
-					<a href="javascript:void(0);" class="icon"  onclick="myFunction()"> <i class="fa fa-bars"></i></a>
-				</div>
+				<a href="javascript:void(0);" class="icon"  onclick="myFunction()"><i class="fa fa-bars"></i></a>
+				<a href="home.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="services.html">Services</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="achievement.html">Achievement</a>
+				<a href="blog.html">Blog</a>
+			</div>
 			</nav>
 		</header><br>
 		<div class="banner-text">
 			<h3>Welcome to JOGA</h3><br>
 		</div><br>
-		<form class="Login-container" id="StudentForm">
-			<label for="username">User Name</label>
-			<input type="text" name="username"><br>
-			<label for="password">Password</label>
-			<input type="password"  name="psword"><br>
-			<label for="Phonenumber">Phone Number</label>
-			<input type="Phonenumber" name="Phone Number"><br>
-			<div class="login-clearmid">
-				<input type="button" name="submit" onclick="submmission()" class=" Submit-btn" value="Submit">
-				<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
-			</div>
-		</form><br><br><br><br><br><br><br><br>
+		<div class="row">
+		<div class="tabs registertabs column">
+			<a href="register.html" title="New Student">Register</a>
+			<a href="learn.html">Learn More</a>
+			<a href="login.html" title="Existing Student">Login</a><br>
+		</div>
+		<div class="column login-card">
+			<form class="Login-container" id="StudentForm">
+				<label for="username">User Name</label>
+				<input type="text" name="username"><br>
+				<label for="password">Password</label>
+				<input type="password"  name="psword"><br>
+				<label for="Phonenumber">Phone Number</label>
+				<input type="Phonenumber" name="Phone Number"><br>
+				<div class="login-clearmid">
+					<input type="button" name="submit" onclick="submmission()" class=" Submit-btn" value="Submit">
+					<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
+				</div>
+			</form>
+		</div>
 		<form class="authentication" id="StudentAuth">
 			<label for="code">Enter Code Sent to your phone Number</label>
 			<input type="text" name="username"><br>
@@ -47,10 +55,5 @@
 				<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
 			</div>
 		</form>
-		<div class="tabs">
-			<a href="register.html" title="New Student">Register</a>
-			<a href="learn.html">Learn More</a>
-			<a href="login.html" title="Existing Student">Login</a><br>
-		</div>
 	</body>
 </html>

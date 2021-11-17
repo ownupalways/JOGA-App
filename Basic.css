@@ -10,33 +10,64 @@
 }
 /*landing page styling for index file*/
 body{
-	height:180vh;
+	height:80vh;
 	width: 100%;
 	background-image:url(images/baby.png);
 	background-size: cover;
-	background-position:center center;
 	position: relative;
-	z-index: 111;
+	z-index: 1;
 }
-body::before{
+/*blending the background with a light dark color*/
+body:before{
 	content: '';
 	position: absolute;
+	width: 100%;
+	height:200%;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	background:rgba(0,0,0,0.6);
 	z-index: -1;
 }
+@media screen and (max-width: 600px){
+	body{
+		height:150vh;
+		width: 100%;
+		background-image:url(images/baby.png);
+		background-size: cover;
+		background-position: center center;
+		}
+	body:before{
+		height:250%;
+	}
+}
+/*For page layout of both login and register pages*/
+.column{
+	float:left;
+	width:50%;
+	padding:15px;
+}
+.row:after{
+	content:"";
+	display: table;
+	clear: both;
+}
 
+/*Responsiveness For page layout of both login and register pages*/
+@media screen and (max-width: 600px){
+	.column{
+		width:100%;
+	}
+}
+/*header "welcoming text styling for homepage, register page and ligin page"*/
+.header-text{
+	text-align:center;
+}
+/*Width and display for landing page declaration and welcoming*/
 .banner-text{
-	width: 600px;
-	display: block;
+	width:700px;
 	margin: auto;
-	float: none;
 	position: relative;
-	top: 50px;
-	text-align: center;
+	top: 30px;
 }
 /*Animation effect for auto-text typing*/
 .banner-text h1{
@@ -51,6 +82,18 @@ body::before{
 	animation: ani1 3.5s steps(40, end), ani2 .75s step-end infinite;
 	-webkit-animation: ani1 3.5s steps(40, end), ani2 .75s step-end infinite;
 }
+.banner-text h3{
+	color: rgba(255,255,255,0.7);
+	font-size: 25px;
+	text-align: center;
+}
+.banner-text p{
+	color: rgba(255,255,255,0.7);
+	font-size: 20px;
+	padding: 5px;
+	text-align: center;
+}
+/*Auto Typing welcomimg text animation setup*/
 @keyframes ani1{
 	from{
 		width: 0;
@@ -63,26 +106,12 @@ body::before{
 	from, to{border-color: transparent}
 	50%{border-color: #fff}
 }
-/*landing page note styling*/
-.banner-text h3{
-	color: rgba(255,255,255,0.7);
-	font-size: 25px;
-	text-align: center;
-}
-.banner-text p{
-	color: rgba(255,255,255,0.7);
-	font-size: 20px;
-	padding: 5px;
-	text-align: center;
-}
 
 /*this for the navigation "Register", "Learn More" and "Login" buttons in Register and Login files */
 .tabs{
-	margin-top: 150px;
+	margin: 45vh 10px 60px 20vh;
 }
-.registertabs{
-	margin-top: 140vh;
-}
+
 .tabs a{
 	color: #fff;
 	text-align: center;
@@ -107,32 +136,6 @@ body::before{
 	-ms-transition:1s;
 	-o-transition:1s;
 }
-/*this for the navigation "Register", "Learn More" and "Login" buttons in index and other files */
-.banner-text .tabs a{
-	color: #fff;
-	text-align: center;
-	margin: 25px;
-	padding: 10px 30px;
-	text-decoration: none;
-	border: 2px solid #fff;
-	border-radius: 50px;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	-ms-border-radius: 50px;
-	-o-border-radius: 50px;
-	display: inline-block;
-	font-size: 18px;
-}
-.banner-text .tabs a:hover{
-	background: #fff;
-	color: #000;
-	transition:1s;
-	-webkit-transition:1s;
-	-moz-transition:1s;
-	-ms-transition:1s;
-	-o-transition:1s;
-}
-
 /*styling logo*/
 .logo{
 	float: left;
@@ -180,9 +183,8 @@ body::before{
 		flex-direction: column;
 	}
 	.tabs a{
-		font-size: 15px;
-		text-align: center;
-		margin:20px;
+		float: none;
+		margin: 20px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -190,6 +192,7 @@ body::before{
 /*Styling menu and anchor tags */
 .menuarea{
 	width: 55%;
+	height: 40px;
 	padding-left: 35px;
 	float: right;
 	display: block;
@@ -203,7 +206,7 @@ body::before{
 	float: left;
 	font-size: 16px;
 	display: block;
-	padding: 5px 18px;
+	padding: 0px 20px;
 }
 .menuarea a:hover{
 	color: cyan;
@@ -213,57 +216,52 @@ body::before{
 	-moz-transition: .5s;
 	-ms-transition: .5s;
 	-o-transition: .5s;
-	
 }
-.menuarea a i{
+.menuarea i{
 	font-size: 25px;
 }
 .menuarea .icon {
 	display: none;
 }
 /*Styling menu responsiveness for landing page*/
-@media screen and (max-width: 600px){
-	body{
-		height:180vh;
-		width: 100%;
-		background-image:url(images/baby.png);
-		background-size: cover;
-		background-position: center center;
-	}
-}
+
 @media screen and (max-width: 600px){
 	.menuarea a{
 		display: none;
 	}
-	.menuarea a:hover:not(:last-child){
+	.menuarea a:hover:not(:first-child){
 		background-color: white;
-
 	}
-	.menuarea a.icon{
+	.menuarea .icon{
 		float: right;
 		display: block;
-		margin-right: 0;
+		margin: 5px 5px 10px 0;
+		position: relative;
+		z-index: 4;
 	}
 }
 
 @media screen and (max-width: 600px){
-	.menuarrea.responsive{
+	.menuarea.responsive{
 		position: relative;
 	}
 	.menuarea.responsive .icon{
 		position: absolute;
 		right: 0;
 		top: 0;
+
 	}
 	.menuarea.responsive a {
 		float: none;
+		margin-right: 0;
 		width: auto;
 		display: block;
 		text-align: left;
 		background-color: #c2c405;
+		position: relative;
+		z-index: 4;
 	}
 }
-
 
 
 /*Registration form styling for registration file only*/
@@ -277,10 +275,31 @@ body::before{
 	margin: 0 50px 50px 5px;
 	position:absolute;
 	right: 8px;
-	float: auto;
 }
 /*Login fields styling for login file only*/
 .Login-container{
+	width:450px ;
+	height: auto;
+	padding: 15px 10px 20px 2px;
+	border-radius: 5px;
+	background-color: #345dad;
+	opacity: .6;
+	margin: 0 50px 50px 5px;
+	position:absolute;
+	right: 8px;
+	float: auto;
+}
+.Logintabs{
+	margin:0 10px 20px 10px;
+	top: 0;
+}
+/*.login-card{
+	margin-top: 0;
+}*/
+/*styling authentication page on login page*/
+.authentication{
+	display: none;
+	position: absolute;
 	width:450px ;
 	height: auto;
 	padding: 15px 10px 20px 2px;
@@ -312,7 +331,6 @@ input[type = text], input[type=date], input[type= password], input[type=phonenum
 	width: 95%;
 	height: 40px;
 	padding: 12px 20px;
-	margin:;
 	line-height: 1.5;
 	box-sizing: border-box;
 	border:none;
@@ -322,14 +340,10 @@ input[type = text], input[type=date], input[type= password], input[type=phonenum
 	outline: none;
 }
 /*particulars for login file only*/
-.login-clearmid{
+login-clearmid{
 	padding-top: 120px;
 }
 
-.authentication{
-	display: none;
-	position: absolute;
-}
 .clearmid .login-clearmid::after{
 	content: "";
 	display: table;
@@ -379,6 +393,7 @@ input[type = text], input[type=date], input[type= password], input[type=phonenum
 	color: #fff;
 	cursor: pointer;
 }
+/*styling responsiveness of register and login forms*/
 @media screen and  (max-width: 600px){
 	.Formcontainer{
 		width:90%;
@@ -395,7 +410,7 @@ input[type = text], input[type=date], input[type= password], input[type=phonenum
 	#StudentForm{
 		padding-bottom: 20px;
 	}
-	
+	/*styling input fields on register and login forms*/
 	input[type = text], input[type=date], input[type=password], input[type=phonenumber], select{
 		width: 100%;
 		padding: 12px 20px;
@@ -404,9 +419,11 @@ input[type = text], input[type=date], input[type= password], input[type=phonenum
 		box-sizing: border-box;
 		border:none;
 	}
+	/*The label for the input fields in both login and register forms*/
 	label{
 		margin-left: 5px;
 	}
+	/*Responsiveness of submission and cancel buttons for both login and register forms*/
 	.cancel-btn{
 		padding: 5px;
 		outline: none;
