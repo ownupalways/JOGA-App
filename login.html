@@ -28,32 +28,37 @@
 			<h3>Welcome to JOGA</h3><br>
 		</div><br>
 		<div class="row">
-		<div class="tabs registertabs column">
-			<a href="register.html" title="New Student">Register</a>
-			<a href="learn.html">Learn More</a>
-			<a href="login.html" title="Existing Student">Login</a><br>
-		</div>
-		<div class="column login-card">
-			<form class="Login-container" id="StudentForm">
-				<label for="username">User Name</label>
-				<input type="text" name="username"><br>
-				<label for="password">Password</label>
-				<input type="password"  name="psword"><br>
-				<label for="Phonenumber">Phone Number</label>
-				<input type="Phonenumber" name="Phone Number"><br>
-				<div class="login-clearmid">
-					<input type="button" name="submit" onclick="submmission()" class=" Submit-btn" value="Submit">
-					<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
+			<div class="column login-card">
+				<div class="card1">
+					<form class="Login-container" id="StudentForm">
+						<label for="username">User Name</label>
+						<input type="text" name="username"><br>
+						<label for="password">Password</label>
+						<input type="password"  name="psword"><br>
+						<label for="Phonenumber">Phone Number</label>
+						<input type="Phonenumber" name="Phone Number"><br>
+						<div class="login-clearmid">
+							<input type="button" name="submit" onclick="submmission()" class=" Submit-btn" value="Submit">
+							<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
+						</div>
+					</form>
+					<form class="authentication" id="StudentAuth">
+						<label for="code">Enter Code Sent to your phone Number</label>
+						<input type="text" name="username"><br>
+						<div class="login-clearmid">
+							<input type="button" name="submit" class=" Submit-btn" value="Submit">
+							<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
+						</div>
+					</form>
 				</div>
-			</form>
-		</div>
-		<form class="authentication" id="StudentAuth">
-			<label for="code">Enter Code Sent to your phone Number</label>
-			<input type="text" name="username"><br>
-			<div class="login-clearmid">
-				<input type="button" name="submit" class=" Submit-btn" value="Submit">
-				<input type="button" name="cancel" class=" cancel-btn" value="Cancel">
 			</div>
-		</form>
-	</body>
+			<div class="column">
+				<div class="tabs registertabs">
+					<a href="register.html" title="New Student">Register</a>
+					<a href="learn.html">Learn More</a>
+					<a href="login.html" title="Existing Student">Login</a><br>
+				</div>
+			</div>
+		</div>
+	<body>
 </html>

@@ -19,7 +19,7 @@ body{
 }
 /*blending the background with a light dark color*/
 body:before{
-	content: '';
+	content: "";
 	position: absolute;
 	width: 100%;
 	height:200%;
@@ -28,23 +28,27 @@ body:before{
 	background:rgba(0,0,0,0.6);
 	z-index: -1;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 786px){
 	body{
-		height:150vh;
+		height:160vh;
 		width: 100%;
 		background-image:url(images/baby.png);
 		background-size: cover;
-		background-position: center center;
+		background-position: center;
 		}
 	body:before{
-		height:250%;
+		height:100%;
 	}
 }
 /*For page layout of both login and register pages*/
+
 .column{
 	float:left;
-	width:50%;
+	width:33.33%;
 	padding:15px;
+}
+.row{
+	margin: 0 -5px;
 }
 .row:after{
 	content:"";
@@ -175,18 +179,21 @@ body:before{
 	.banner-text p{
 		font-size: 15px;
 	}
-	.banner-text .tabs a{
+	/*.banner-text .tabs a{
 		font-size: 15px;
 		text-align: center;
 		margin: 20px;
 		display: flex;
 		flex-direction: column;
-	}
+	}*/
 	.tabs a{
 		float: none;
-		margin: 20px;
 		display: flex;
 		flex-direction: column;
+		padding-left: 10px;
+	}
+	.registertabs a{
+		align-items: center;
 	}
 }
 /*Styling menu and anchor tags */
