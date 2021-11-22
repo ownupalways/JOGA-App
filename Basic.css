@@ -2,21 +2,30 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: poppins;
-	font-weight: 400;
+	font-family: 'poppins', sans-serif;
+	font-weight: 280;
 	line-height: 1.5;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition:all .2s linear ;
 	box-sizing: border-box;
 	user-select: none;
+	-webkit-transition:all .2s linear ;
+	-moz-transition:all .2s linear ;
+	-ms-transition:all .2s linear ;
+	-o-transition:all .2s linear ;
 }
 /*landing page styling for index file*/
-body{
+/*body{
 	height:80vh;
 	width: 100%;
 	background-image:url(images/baby.png);
 	background-size: cover;
 	position: relative;
 	z-index: 1;
-}
+}*/
 /*blending the background with a light dark color*/
 body:before{
 	content: "";
@@ -28,7 +37,7 @@ body:before{
 	background:rgba(0,0,0,0.6);
 	z-index: -1;
 }
-@media screen and (max-width: 786px){
+/*@media screen and (max-width:600px){
 	body{
 		height:160vh;
 		width: 100%;
@@ -39,7 +48,7 @@ body:before{
 	body:before{
 		height:100%;
 	}
-}
+}*/
 /*For page layout of both login and register pages*/
 
 .column{
