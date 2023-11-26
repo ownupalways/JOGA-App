@@ -93,7 +93,7 @@ body{
 	width:450px;
 	height:auto;
 	margin: 10px;
-	background-color: #345dad;
+	/* background-color: #345dad; */
 }
 .Logintabs{
 	margin:0 10px 20px 10px;
@@ -133,7 +133,7 @@ input, select{
 	padding-left:10px;
 }
 /*input field styling*/
-input[type = text], input[type=date], input[type= password], input[type=phonenumber], select{
+input[type = text], input[type=date], input[type= password], input[type=tel], select{
 	width: 95%;
 	height: 40px;
 	padding: 12px 20px;
@@ -146,20 +146,20 @@ input[type = text], input[type=date], input[type= password], input[type=phonenum
 	outline: none;
 }
 /*particulars for login file only*/
-login-clearmid{
+login-clear-mid{
 	padding-top: 120px;
 }
 
-.clearmid .login-clearmid::after{
+.clear-mid .login-clear-mid::after{
 	content: "";
 	display: table;
 	clear: both;
 }
 /*Particulars for all Submit and cancel buttons*/
-.clearmid{
+.clear-mid{
 	padding-top: 35vh;
 }
-.login-clearmid{
+.login-clear-mid{
 	padding-top: 20vh;
 }
 .Submit-btn{
